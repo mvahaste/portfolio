@@ -1,4 +1,8 @@
+import { Button } from "@/components/ui/button";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { Moon } from "lucide-react";
 import { Inter } from "next/font/google";
+import Link from "next/link";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -11,6 +15,28 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="en">
+			<div className="container mx-auto flex flex-row items-center border-b-2 px-6 py-2 h-24">
+				<h1 className="font-bold">mvahaste.dev</h1>
+				<div className="grow flex justify-between">
+					<div className="flex items-center justify-center gap-2">
+						<Link href="/projects">Projects</Link>
+						<Link href="/about">About</Link>
+						<Link href="/contact">Contact</Link>
+					</div>
+					<div className="flex items-center justify-center gap-2">
+						<DropdownMenu>
+							<DropdownMenuTrigger>
+								<Button variant="ghost">Theme</Button>
+							</DropdownMenuTrigger>
+							<DropdownMenuContent>
+								<DropdownMenuItem>Light</DropdownMenuItem>
+								<DropdownMenuItem>Dark</DropdownMenuItem>
+								<DropdownMenuItem>System</DropdownMenuItem>
+							</DropdownMenuContent>
+						</DropdownMenu>
+					</div>
+				</div>
+			</div>
 			<body className={inter.className}>{children}</body>
 		</html>
 	);
