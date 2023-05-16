@@ -14,7 +14,7 @@ const Header = () => {
 	const { resolvedTheme, setTheme } = useTheme();
 
 	return (
-		<header className="sticky z-40 top-0 left-0 right-0 mb-4 md:mb-8 px-4 h-14 border-b shadow-sm bg-background/75 backdrop-blur-md">
+		<header className="sticky z-40 top-0 left-0 right-0 mb-6 md:mb-8 px-4 h-14 border-b shadow-sm bg-background/75 backdrop-blur-md">
 			<div className="max-w-[83rem] mx-auto grow h-14 flex justify-between items-center">
 				<div className="flex">
 					<div className="container px-0 flex items-center gap-2 mr-5 md:mr-6">
