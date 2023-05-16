@@ -9,12 +9,13 @@ const ProjectCard = ({ project }: { project: Project }) => {
 		<div className="bg-card border drop-shadow rounded-lg w-full md:w-80 flex flex-col pb-7">
 			<a href={project.image} target="_blank">
 				<Image
+					quality={100}
 					src={project.image}
 					width={300}
 					height={300}
 					alt={project.title + "thumbnail"}
 					title="Open full image in new tab"
-					className="border-b rounded-tl-lg rounded-tr-lg aspect-square object-cover w-full h-auto"
+					className="border-b rounded-tl-lg rounded-tr-lg aspect-square object-top object-cover w-full h-auto"
 				/>
 			</a>
 			<div className="flex flex-col px-3 pb-3 pt-2">

@@ -1,5 +1,6 @@
 // Project interface
 export interface Project {
+    id: number;
     title: string;
     description: string;
     image: string;
@@ -10,6 +11,7 @@ export interface Project {
 // Project data
 export const projects: Project[] = [
     {
+        id: 1,
         title: "Folt Food",
         description: "A visual-only clone of the Bolt Food app, all of the five main screens, made with Flutter.",
         image: "/projects/folt-food.jpg",
@@ -17,26 +19,27 @@ export const projects: Project[] = [
         tags: ["Flutter", "Dart"]
     },
     {
+        id: 2,
         title: "KFC discount codes",
-        // Discordi bot, mis laeb KFC_Est Facebooki lehelt sooduskoodid ja postitab need Discordi kanalisse iga teisipäev kell 8.
         description: "A Discord bot that gets the latest discount from the KFC_Est Facebook page and sends it to a Discord channel every Tuesday at 8.",
         image: "/projects/kfc-sooduskoodid.jpg",
         link: "https://github.com/mvahaste/kfc-codes-bot",
         tags: ["Python", "API/Discord"]
+    },
+    {
+        id: 3,
+        title: "Colors website",
+        description: "A website I made for a class project. It has a searchable grid of colors and another where you can change the grid size and draw.",
+        image: "/projects/colors-website.png",
+        link: "https://github.com/mvahaste/colors-website",
+        tags: ["HTML", "CSS", "JavaScript"]
+    },
+    {
+        id: 4,
+        title: "Notepad",
+        description: "A basic website for quickly taking some notes. Sometimes I need to write something down while playing games and I can't alt-tab, so I made this to use in the Steam browser.",
+        image: "/projects/notepad.jpg",
+        link: "https://github.com/mvahaste/notepad",
+        tags: ["HTML", "CSS", "JavaScript"]
     }
-    // ,
-    // {
-    //     title: "Lorem Ipsum",
-    //     description: "Sint enim Lorem officia Lorem amet consequat cupidatat. Nisi cillum mollit reprehenderit consequat elit.",
-    //     image: "/placeholder.webp",
-    //     link: "https://google.com",
-    //     tags: ["Dolor", "Sit", "Amet"]
-    // },
-    // {
-    //     title: "Velit reprehenderit velit",
-    //     description: "Amet dolor incididunt qui esse non magna occaecat tempor veniam ex in in ullamco consectetur. Eiusmod consectetur veniam aute aliquip.",
-    //     image: "/placeholder.webp",
-    //     link: "https://google.com",
-    //     tags: ["Lorem", "Ipsum"]
-    // }
 ];
