@@ -11,7 +11,7 @@ const Header = () => {
 	const path = usePathname();
 
 	return (
-		<header className="sticky top-0 left-0 right-0 mb-2 md:mb-6 px-4 h-14 border-b shadow-sm bg-white/75 backdrop-blur-md">
+		<header className="sticky top-0 left-0 right-0 mb-2 md:mb-6 px-4 h-14 border-b shadow-sm bg-white/75 dark:bg-black/75 backdrop-blur-md">
 			<div className="max-w-[83rem] mx-auto grow h-14 flex justify-between items-center">
 				<div className="flex">
 					<div className="container px-0 flex items-center gap-2 mr-5 md:mr-6">

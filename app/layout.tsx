@@ -23,16 +23,19 @@ export const metadata = {
 	description: "Portfolio of Mikk Vahaste",
 };
 
+// https://dev.to/chinmaymhatre/implementing-dark-mode-in-nextjs-with-tailwind-css-and-next-themes-a4e
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="en">
 			<title>{metadata.title}</title>
-			<ThemeProvider attribute="class" defaultTheme="system">
-				<body className={(inter.className, "min-h-screen antialiased pb-6")}>
+
+			<body className={(inter.className, "min-h-screen antialiased pb-6 bg-white dark:bg-black")}>
+				<ThemeProvider attribute="class" defaultTheme="system">
 					<Header />
 					<div className="lg:max-w-[85rem] sm:max-w-full mx-auto px-4">{children}</div>
-				</body>
-			</ThemeProvider>
+				</ThemeProvider>
+			</body>
 		</html>
 	);
 }
