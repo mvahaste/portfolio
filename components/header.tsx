@@ -1,6 +1,7 @@
 "use client";
 
 import { Github, Laptop, Moon, Sun, Twitter } from "lucide-react";
+import { useTheme } from "next-themes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
@@ -10,8 +11,10 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 const Header = () => {
 	const path = usePathname();
 
+	const { theme, resolvedTheme, setTheme } = useTheme();
+
 	return (
-		<header className="sticky top-0 left-0 right-0 mb-2 md:mb-6 px-4 h-14 border-b shadow-sm bg-white/75 backdrop-blur-md">
+		<header className="sticky top-0 left-0 right-0 mb-2 md:mb-6 px-4 h-14 border-b shadow-sm bg-background/75 backdrop-blur-md">
 			<div className="max-w-[83rem] mx-auto grow h-14 flex justify-between items-center">
 				<div className="flex">
 					<div className="container px-0 flex items-center gap-2 mr-5 md:mr-6">
@@ -50,19 +53,19 @@ const Header = () => {
 					<DropdownMenu>
 						<DropdownMenuTrigger asChild>
 							<Button variant="ghost" className="flex items-center gap-2 w-8 h-8 p-0">
-								<Sun size={22} />
+								{resolvedTheme === "dark" ? <Moon size={22} /> : <Sun size={22} />}
 							</Button>
 						</DropdownMenuTrigger>
 						<DropdownMenuContent>
-							<DropdownMenuItem>
+							<DropdownMenuItem onClick={() => setTheme("light")}>
 								<Sun className="mr-2 h-4 w-4" />
 								Light
 							</DropdownMenuItem>
-							<DropdownMenuItem>
+							<DropdownMenuItem onClick={() => setTheme("dark")}>
 								<Moon className="mr-2 h-4 w-4" />
 								Dark
 							</DropdownMenuItem>
-							<DropdownMenuItem>
+							<DropdownMenuItem onClick={() => setTheme("system")}>
 								<Laptop className="mr-2 h-4 w-4" />
 								System
 							</DropdownMenuItem>
