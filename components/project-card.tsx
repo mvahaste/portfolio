@@ -1,28 +1,42 @@
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Badge } from "@/components/ui/badge";
 import { Project } from "@/lib/project";
 import { ExternalLink } from "lucide-react";
-import { JetBrains_Mono } from "next/font/google";
-import Image from "next/image";
 
-const jbmono = JetBrains_Mono({ subsets: ["latin"] });
+import Image from "next/image";
 
 const ProjectCard = ({ project }: { project: Project }) => {
 	return (
-		<div className="bg-card border drop-shadow rounded-lg w-full md:w-80 pb-2 pt-3 px-3 flex flex-col">
+		<div className="bg-card border drop-shadow rounded-lg w-full md:w-80 flex flex-col pb-7">
 			<a href={project.image} target="_blank">
-				<Image src={project.image} width={300} height={300} alt={project.title + "thumbnail"} className="rounded-lg border mb-1 aspect-[3/4] object-cover" />
+				<Image
+					src={project.image}
+					width={300}
+					height={300}
+					alt={project.title + "thumbnail"}
+					title="Open full image in new tab"
+					className="border-b rounded-tl-lg rounded-tr-lg aspect-square object-cover w-full h-auto"
+				/>
 			</a>
-			<a href={project.link} target="_blank" className="scroll-m-20 text-xl font-semibold tracking-tight hover:underline">
-				{project.title}
-			</a>
-			<p className="leading-7 [&:not(:first-child)]:mt-1 mb-1">{project.description}</p>
-			<div className="grow flex justify-end gap-3 mt-1">
-				{project.tags.map((tag) => (
-					// bg-background/75 text-foreground/60 px-2 py-1 rounded-md text-sm font-medium
-					<span key={tag} className={"rounded-full px-2 py-1 bg-muted text-xs " + jbmono.className}>
-						{tag}
+			<div className="flex flex-col px-3 pb-3 pt-2">
+				<a
+					href={project.link}
+					target="_blank"
+					title="Open project source in new tab"
+					className="scroll-m-20 text-xl font-semibold group tracking-tight hover:underline text-card-foreground"
+				>
+					{project.title}
+					<span className="invisible group-hover:visible">
+						<ExternalLink className="inline-block ml-1 h-5 w-5 mb-1" />
 					</span>
-				))}
+				</a>
+				<p className="leading-7 [&:not(:first-child)]:mt-0.5 mb-1 text-card-foreground">{project.description}</p>
+				<div className="flex justify-end gap-3 absolute bottom-3 right-3">
+					{project.tags.map((tag) => (
+						<Badge key={tag} variant="outline">
+							{tag}
+						</Badge>
+					))}
+				</div>
 			</div>
 		</div>
 	);
