@@ -26,9 +26,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 	return (
 		<html lang="en">
 			<title>{metadata.title}</title>
-			<body className={(inter.className, "min-h-screen antialiased vsc-initialized")}>
+			<body className={(inter.className, "min-h-screen antialiased pb-6")}>
 				<Header />
-				<div className="pt-4 pb-10 lg:max-w-[86rem] px-6 sm:max-w-full mx-auto">{children}</div>
+				<div className="lg:max-w-[85rem] sm:max-w-full mx-auto px-4">{children}</div>
 			</body>
 		</html>
 	);
