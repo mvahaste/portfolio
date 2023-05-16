@@ -14,14 +14,14 @@ const Header = () => {
 		<header className="sticky top-0 left-0 right-0 mb-2 md:mb-6 px-4 h-14 border-b shadow-sm bg-white/75 backdrop-blur-md">
 			<div className="max-w-[83rem] mx-auto grow h-14 flex justify-between items-center">
 				<div className="flex">
-					<div className="container px-0 flex items-center gap-2 mr-6">
+					<div className="container px-0 flex items-center gap-2 mr-5 md:mr-6">
 						<Avatar className="w-6 h-6 inline">
 							<AvatarImage src="https://github.com/mvahaste.png" alt="@mvahaste" />
 							<AvatarFallback>MV</AvatarFallback>
 						</Avatar>
 						<span className="hidden font-bold sm:inline-block">mvahaste</span>
 					</div>
-					<nav className="flex items-center space-x-6 text-sm font-medium">
+					<nav className="flex items-center space-x-5 md:space-x-6 text-sm font-medium pt-0.5">
 						<Link href="/" className={"transition-colors hover:text-foreground/80 text-foreground/60" + (path === "/" ? "text-foreground" : "")}>
 							Home
 						</Link>
@@ -50,7 +50,7 @@ const Header = () => {
 					<DropdownMenu>
 						<DropdownMenuTrigger asChild>
 							<Button variant="ghost" className="flex items-center gap-2 w-8 h-8 p-0">
-								<Moon size={22} />
+								<Sun size={22} />
 							</Button>
 						</DropdownMenuTrigger>
 						<DropdownMenuContent>
