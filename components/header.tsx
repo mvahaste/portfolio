@@ -11,10 +11,10 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 const Header = () => {
 	const path = usePathname();
 
-	const { theme, resolvedTheme, setTheme } = useTheme();
+	const { resolvedTheme, setTheme } = useTheme();
 
 	return (
-		<header className="sticky top-0 left-0 right-0 mb-2 md:mb-6 px-4 h-14 border-b shadow-sm bg-background/75 backdrop-blur-md">
+		<header className="sticky z-40 top-0 left-0 right-0 mb-4 md:mb-8 px-4 h-14 border-b shadow-sm bg-background/75 backdrop-blur-md">
 			<div className="max-w-[83rem] mx-auto grow h-14 flex justify-between items-center">
 				<div className="flex">
 					<div className="container px-0 flex items-center gap-2 mr-5 md:mr-6">
@@ -24,7 +24,7 @@ const Header = () => {
 						</Avatar>
 						<span className="hidden font-bold sm:inline-block">mvahaste</span>
 					</div>
-					<nav className="flex items-center space-x-5 md:space-x-6 text-sm font-medium pt-0.5">
+					<nav className="flex items-center space-x-4 md:space-x-6 text-sm font-medium pt-0.5">
 						<Link href="/" className={"transition-colors hover:text-foreground/80 text-foreground/60" + (path === "/" ? "text-foreground" : "")}>
 							Home
 						</Link>
@@ -76,9 +76,5 @@ const Header = () => {
 		</header>
 	);
 };
-
-function setTheme(theme: string): void {
-	console.log(theme);
-}
 
 export default Header;
