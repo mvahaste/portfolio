@@ -30,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 		<html lang="en">
 			<title>{metadata.title}</title>
 
-			<body className={(inter.className, "min-h-screen antialiased pb-6 bg-background")}>
+			<body className={(inter.className, "min-h-screen antialiased pb-4 bg-background transition-all duration-75")}>
 				<ThemeProvider attribute="class" defaultTheme="system">
 					<Header />
 					<div className="lg:max-w-[85rem] sm:max-w-full mx-auto px-4">{children}</div>
