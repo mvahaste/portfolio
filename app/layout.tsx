@@ -23,14 +23,12 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-	const bodyClasses = "min-h-screen antialiased vsc-initialized";
-
 	return (
 		<html lang="en">
 			<title>{metadata.title}</title>
-			<body className={(inter.className, bodyClasses)}>
+			<body className={(inter.className, "min-h-screen antialiased vsc-initialized")}>
 				<Header />
-				<div className="lg:pt-6 lg:pb-10 lg:max-w-[86rem] px-6 sm:max-w-full mx-auto">{children}</div>
+				<div className="pt-4 pb-10 lg:max-w-[86rem] px-6 sm:max-w-full mx-auto">{children}</div>
 			</body>
 		</html>
 	);
