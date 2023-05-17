@@ -20,7 +20,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 	return (
 		<html lang="en">
 			<title>{metadata.title}</title>
-			<link rel="icon" href="https://github.com/mvahaste.png?size=32" type="image/png" /> {/* ??? */}
 			<body className={`${inter.variable} font-sans min-h-screen antialiased pb-6 bg-background transition-colors duration-75`}>
 				<ThemeProvider attribute="class" defaultTheme="system">
 					<Header />
