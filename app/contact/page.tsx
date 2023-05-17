@@ -1,7 +1,7 @@
 export default function Contact() {
 	return (
 		<main>
-			<p>Contact</p>
+			<p>Get in contact with me</p>
 		</main>
 	);
 }

@@ -17,17 +17,11 @@ const ProjectCard = ({ project }: { project: Project }) => {
 					width={300}
 					height={300}
 					alt={project.title + "thumbnail"}
-					title="Open full image in new tab"
 					className="border-b rounded-tl-lg rounded-tr-lg aspect-square object-top object-cover w-full h-auto shadow-inner"
 				/>
 			</a>
 			<div className="flex flex-col px-3 pb-3 pt-2">
-				<a
-					href={project.link}
-					target="_blank"
-					title="Open project source in new tab"
-					className="scroll-m-20 text-xl font-semibold group tracking-tight hover:underline text-card-foreground"
-				>
+				<a href={project.link} target="_blank" className="scroll-m-20 text-xl font-semibold group tracking-tight hover:underline text-card-foreground">
 					{project.title}
 					<span className="invisible group-hover:visible">
 						<ExternalLink className="inline-block ml-1 h-5 w-5 mb-1" />

@@ -20,7 +20,7 @@ const Header = () => {
 					<div className="container px-0 flex items-center gap-2 mr-5 md:mr-6">
 						<Avatar className="w-6 h-6 inline">
 							<AvatarImage src="https://github.com/mvahaste.png" alt="@mvahaste" />
-							<AvatarFallback>MV</AvatarFallback>
+							<AvatarFallback>?</AvatarFallback>
 						</Avatar>
 						<span className="hidden font-bold sm:inline-block">Mikk Vahaste</span>
 					</div>
@@ -34,9 +34,6 @@ const Header = () => {
 						<Link href="/contact" className={"transition-colors hover:text-foreground/80 text-foreground/60" + (path === "/contact" ? "text-foreground" : "")}>
 							Contact
 						</Link>
-						<Link href="/about" className={"transition-colors hover:text-foreground/80 text-foreground/60" + (path === "/about" ? "text-foreground" : "")}>
-							About
-						</Link>
 					</nav>
 				</div>
 				<div className="flex gap-3">
@@ -45,11 +42,11 @@ const Header = () => {
 							<Github size={22} />
 						</a>
 					</Button>
-					<Button variant="ghost" asChild className="items-center gap-2 w-8 h-8 p-0 hidden sm:flex">
+					{/* <Button variant="ghost" asChild className="items-center gap-2 w-8 h-8 p-0 hidden sm:flex">
 						<a href="https://twitter.com/@mvahaste" target="_blank">
 							<Twitter size={22} />
 						</a>
-					</Button>
+					</Button> */}
 					<DropdownMenu>
 						<DropdownMenuTrigger asChild>
 							<Button variant="ghost" className="flex items-center gap-2 w-8 h-8 p-0">
