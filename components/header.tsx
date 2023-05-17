@@ -42,11 +42,7 @@ const Header = () => {
 							<Github size={22} />
 						</a>
 					</Button>
-					{/* <Button variant="ghost" asChild className="items-center gap-2 w-8 h-8 p-0 hidden sm:flex">
-						<a href="https://twitter.com/@mvahaste" target="_blank">
-							<Twitter size={22} />
-						</a>
-					</Button> */}
+					{/* TODO: There is a bug here, fix it */}
 					<DropdownMenu>
 						<DropdownMenuTrigger asChild>
 							<Button variant="ghost" className="flex items-center gap-2 w-8 h-8 p-0">
