@@ -6,6 +6,7 @@ export interface Project {
     image: string;
     link: string;
     tags: string[];
+    public: boolean;
 }
 
 // Project data
@@ -16,7 +17,8 @@ export const projects: Project[] = [
         description: "A visual-only clone of the Bolt Food app, all of the five main screens, made with Flutter.",
         image: "/projects/folt-food.jpg",
         link: "https://github.com/mvahaste/folt-food",
-        tags: ["Flutter", "Dart"]
+        tags: ["Flutter", "Dart"],
+        public: true
     },
     {
         id: 2,
@@ -24,7 +26,8 @@ export const projects: Project[] = [
         description: "A Discord bot that gets the latest discount from the KFC_Est Facebook page and sends it to a Discord channel every Tuesday at 8.",
         image: "/projects/kfc-sooduskoodid.jpg",
         link: "https://github.com/mvahaste/kfc-codes-bot",
-        tags: ["Python", "API/Discord"]
+        tags: ["Python", "API/Discord"],
+        public: false
     },
     {
         id: 3,
@@ -32,7 +35,8 @@ export const projects: Project[] = [
         description: "A website I made for a class project. It has a searchable grid of colors and another where you can change the grid size and draw.",
         image: "/projects/colors-website.png",
         link: "https://github.com/mvahaste/colors-website",
-        tags: ["HTML", "CSS", "JavaScript"]
+        tags: ["HTML", "CSS", "JavaScript"],
+        public: true
     },
     {
         id: 4,
@@ -40,6 +44,16 @@ export const projects: Project[] = [
         description: "A basic website for quickly taking some notes. Sometimes I need to write something down while playing games and I can't alt-tab, so I made this to use in the Steam browser.",
         image: "/projects/notepad.jpg",
         link: "https://github.com/mvahaste/notepad",
-        tags: ["HTML", "CSS", "JavaScript"]
+        tags: ["HTML", "CSS", "JavaScript"],
+        public: true
+    },
+    {
+        id: 4,
+        title: "Portfolio website",
+        description: "My portfolio website with some info about me as well as some of my projects. This is the website you're on right now! ",
+        image: "/projects/portfolio.jpg",
+        link: "https://github.com/mvahaste/portfolio",
+        tags: ["Next.js", "TypeScript"],
+        public: false
     }
 ];

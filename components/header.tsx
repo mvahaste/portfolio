@@ -22,7 +22,7 @@ const Header = () => {
 							<AvatarImage src="https://github.com/mvahaste.png" alt="@mvahaste" />
 							<AvatarFallback>MV</AvatarFallback>
 						</Avatar>
-						<span className="hidden font-bold sm:inline-block">mvahaste</span>
+						<span className="hidden font-bold sm:inline-block">Mikk Vahaste</span>
 					</div>
 					<nav className="flex items-center space-x-4 md:space-x-6 text-sm font-medium pt-0.5">
 						<Link href="/" className={"transition-colors hover:text-foreground/80 text-foreground/60" + (path === "/" ? "text-foreground" : "")}>

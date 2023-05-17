@@ -1,12 +1,15 @@
 import { Badge } from "@/components/ui/badge";
-import { Project } from "@/lib/project";
-import { ExternalLink } from "lucide-react";
+import { Project } from "@/lib/projects";
+import { ExternalLink, Lock, Unlock } from "lucide-react";
+
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 import Image from "next/image";
+import CustomTooltip from "./custom-tooltip";
 
 const ProjectCard = ({ project }: { project: Project }) => {
 	return (
-		<div className="bg-card border drop-shadow rounded-lg w-full md:w-80 flex flex-col pb-7">
+		<div className="bg-card border drop-shadow rounded-lg w-full md:w-80 flex flex-col pb-7 z-30">
 			<a href={project.image} target="_blank">
 				<Image
 					quality={100}
@@ -15,7 +18,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
 					height={300}
 					alt={project.title + "thumbnail"}
 					title="Open full image in new tab"
-					className="border-b rounded-tl-lg rounded-tr-lg aspect-square object-top object-cover w-full h-auto"
+					className="border-b rounded-tl-lg rounded-tr-lg aspect-square object-top object-cover w-full h-auto shadow-inner"
 				/>
 			</a>
 			<div className="flex flex-col px-3 pb-3 pt-2">
@@ -37,6 +40,10 @@ const ProjectCard = ({ project }: { project: Project }) => {
 							{tag}
 						</Badge>
 					))}
+				</div>
+				<div className="w-6 h-6 absolute bottom-2.5 left-2.5 flex items-center justify-center group" title={`This project is ${project.public ? "public" : "private"}`}>
+					{project.public ? <Unlock size={20} /> : <Lock size={20} />}
+					<CustomTooltip css="absolute bottom-7">This project is {project.public ? "public" : "private"}</CustomTooltip>
 				</div>
 			</div>
 		</div>

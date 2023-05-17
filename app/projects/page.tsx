@@ -1,6 +1,6 @@
 import ProjectCard from "@/components/project-card";
 import { TypographyH3, TypographyP } from "@/components/typography";
-import { projects } from "@/lib/project";
+import { projects } from "@/lib/projects";
 
 export default function Projects() {
 	return (
