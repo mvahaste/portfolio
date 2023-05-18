@@ -12,7 +12,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-	title: "mvahaste.dev",
+	title: "Mikk Vahaste's portfolio",
 	description: "Mikk Vahaste's portfolio website",
 };
 
