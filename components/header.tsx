@@ -14,13 +14,13 @@ const Header = () => {
 	const { resolvedTheme, setTheme } = useTheme();
 
 	return (
-		<header className="sticky z-40 top-0 left-0 right-0 mb-6 md:mb-8 px-4 h-14 border-b shadow-sm bg-background/75 backdrop-blur-md">
+		<header className="sticky z-40 top-0 left-0 right-0 mb-6 md:mb-8 px-4 h-14 border-b shadow-sm bg-background/75 backdrop-blur-xl">
 			<div className="max-w-[83.5rem] mx-auto grow h-14 flex justify-between items-center">
 				<div className="flex">
 					<div className="container px-0 flex items-center gap-2 mr-5 md:mr-6">
 						<Avatar className="w-6 h-6 inline">
 							<AvatarImage src="https://github.com/mvahaste.png" alt="@mvahaste" />
-							<AvatarFallback>?</AvatarFallback>
+							<AvatarFallback className="text-xs">MV</AvatarFallback>
 						</Avatar>
 						<span className="hidden font-bold sm:inline-block">Mikk Vahaste</span>
 					</div>

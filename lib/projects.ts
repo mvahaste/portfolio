@@ -43,6 +43,14 @@ export const projects: Project[] = [
         tags: ["HTML", "CSS", "JavaScript"]
     },
     {
+        id: 5,
+        title: "Startpage",
+        description: "A simple start page with some important sites, a DDG search bar, and, most importantly, ASCII cats.",
+        image: "/projects/startpage.png",
+        link: "https://github.com/mvahaste/startpage",
+        tags: ["HTML", "CSS", "JavaScript"]
+    },
+    {
         id: 4,
         title: "Portfolio website",
         description: "My portfolio website with some info about me as well as some of my projects. This is the website you're on right now! ",
@@ -51,3 +59,5 @@ export const projects: Project[] = [
         tags: ["Next.js", "TypeScript"]
     }
 ];
+
+// https://github.com/mvahaste/startpage

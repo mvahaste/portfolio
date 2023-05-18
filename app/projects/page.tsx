@@ -13,7 +13,6 @@ export default function Projects() {
 				</TypographyP>
 				<TypographyP prose>Clicking on the thumbnail opens the full image in a new tab, clicking on the title opens the project source in a new tab.</TypographyP>
 			</div>
-			<br />
 			<div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-2">
 				{projects.map((project) => (
 					// ? This seems very bad
