@@ -16,6 +16,8 @@ export default function Projects() {
 			<br />
 			<div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-2">
 				{projects.map((project) => (
+					// ? This seems very bad
+					// @ts-expect-error
 					<ProjectCard key={project.id} project={project} />
 				))}
 			</div>

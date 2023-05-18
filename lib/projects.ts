@@ -6,20 +6,10 @@ export interface Project {
     image: string;
     link: string;
     tags: string[];
-    public: boolean;
 }
 
 // Project data
 export const projects: Project[] = [
-    {
-        id: 1,
-        title: "Folt Food",
-        description: "A visual-only clone of the Bolt Food app, all of the five main screens, made with Flutter.",
-        image: "/projects/folt-food.jpg",
-        link: "https://github.com/mvahaste/folt-food",
-        tags: ["Flutter", "Dart"],
-        public: true
-    },
     {
         id: 2,
         title: "KFC discount codes",
@@ -27,7 +17,14 @@ export const projects: Project[] = [
         image: "/projects/kfc-sooduskoodid.jpg",
         link: "https://github.com/mvahaste/kfc-codes-bot",
         tags: ["Python", "API/Discord"],
-        public: false
+    },
+    {
+        id: 1,
+        title: "Folt Food",
+        description: "A visual-only clone of the Bolt Food app, all of the five main screens, made with Flutter.",
+        image: "/projects/folt-food.jpg",
+        link: "https://github.com/mvahaste/folt-food",
+        tags: ["Flutter", "Dart"]   
     },
     {
         id: 3,
@@ -35,8 +32,7 @@ export const projects: Project[] = [
         description: "A website I made for a class project. It has a searchable grid of colors and another where you can change the grid size and draw.",
         image: "/projects/colors-website.png",
         link: "https://github.com/mvahaste/colors-website",
-        tags: ["HTML", "CSS", "JavaScript"],
-        public: true
+        tags: ["HTML", "CSS", "JavaScript"]
     },
     {
         id: 4,
@@ -44,8 +40,7 @@ export const projects: Project[] = [
         description: "A basic website for quickly taking some notes. Sometimes I need to write something down while playing games and I can't alt-tab, so I made this to use in the Steam browser.",
         image: "/projects/notepad.jpg",
         link: "https://github.com/mvahaste/notepad",
-        tags: ["HTML", "CSS", "JavaScript"],
-        public: true
+        tags: ["HTML", "CSS", "JavaScript"]
     },
     {
         id: 4,
@@ -53,7 +48,6 @@ export const projects: Project[] = [
         description: "My portfolio website with some info about me as well as some of my projects. This is the website you're on right now! ",
         image: "/projects/portfolio.jpg",
         link: "https://github.com/mvahaste/portfolio",
-        tags: ["Next.js", "TypeScript"],
-        public: false
+        tags: ["Next.js", "TypeScript"]
     }
 ];
