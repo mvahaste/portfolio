@@ -16,7 +16,7 @@ const ProjectCard = async ({ project }: { project: Project }) => {
 					width={512}
 					height={512}
 					alt={project.title + "thumbnail"}
-					className="border-b rounded-tl-lg rounded-tr-lg aspect-[6/5] object-top object-cover w-full h-auto shadow-inner"
+					className="border-b rounded-tl-lg rounded-tr-lg aspect-[4/3] object-top object-cover w-full h-auto shadow-inner"
 				/>
 			</a>
 			<div className="flex flex-col px-3 pb-3 pt-2">

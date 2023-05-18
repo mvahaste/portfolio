@@ -29,7 +29,3 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 		</html>
 	);
 }
-
-function setTheme(theme: string): void {
-	console.log(theme);
-}
