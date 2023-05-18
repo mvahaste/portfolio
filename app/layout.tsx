@@ -11,7 +11,7 @@ const inter = Inter({
 	variable: "--font-inter",
 });
 
-export const metadata = {
+const metadata = {
 	title: "Mikk Vahaste's portfolio",
 	description: "Mikk Vahaste's portfolio website",
 };
